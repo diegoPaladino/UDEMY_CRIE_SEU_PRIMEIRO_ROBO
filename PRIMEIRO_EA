@@ -13,6 +13,7 @@ int OnInit()
   {
 //--- create timer
    EventSetTimer(60);
+   Print("Estou no OnInit");
    
 //---
    return(INIT_SUCCEEDED);
