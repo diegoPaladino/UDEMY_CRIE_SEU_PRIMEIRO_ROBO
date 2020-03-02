@@ -33,7 +33,9 @@ void OnDeinit(const int reason)
 void OnTick()
   {
 //---
+   //Parte Principal do Robô
    
+   Print("Estamos no OnTick()");
   }
 //+------------------------------------------------------------------+
 //| Timer function                                                   |
