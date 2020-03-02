@@ -49,3 +49,11 @@ void OnTimer()
    Print("Passou 2 segundos ->", k++);
   }
 //+------------------------------------------------------------------+
+
+// the commands to comment in the code: "Ctrl + ;", generates this comment structure:
+//---
+
+// the commands to comment in the code: "Ctrl + .", generates this comment structure:
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
