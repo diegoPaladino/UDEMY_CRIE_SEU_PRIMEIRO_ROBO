@@ -3,6 +3,15 @@
 //|                                                    diegoPaladino |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
+
+int var_1;
+int var_2 = -77;
+uint var_5 = -87;
+
+ushort var_3 = 567;
+uint var_4 = 98;
+
+
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
@@ -53,6 +62,7 @@ void OnTimer()
   {
 //---
    Print("Passou 2 segundos ->", k++);
+   Print("Var_2 = ", var_2, "   Var_5 = ", var_5);
   }
 //+------------------------------------------------------------------+
 
