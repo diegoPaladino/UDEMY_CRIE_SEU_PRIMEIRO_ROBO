@@ -11,6 +11,13 @@ uint var_5 = -87;
 ushort var_3 = 567;
 uint var_4 = 98;
 
+//Variaveis Double
+
+double valorIFR = 1.618;
+
+float a = 1.5;
+float b = 0.5;
+
 
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
