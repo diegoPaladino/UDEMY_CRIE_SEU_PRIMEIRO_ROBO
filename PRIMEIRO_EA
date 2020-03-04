@@ -18,6 +18,15 @@ double valorIFR = 1.618;
 float a = 1.5;
 float b = 0.5;
 
+//+------------------------------------------------------------------+
+//| Variáveis textuais                                               |
+//+------------------------------------------------------------------+
+
+string s_1 = "MQL5";
+string s_2 = " É uma linguagem de programação de EA.";
+
+string s_c = s_1 + s_2;
+
 
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
