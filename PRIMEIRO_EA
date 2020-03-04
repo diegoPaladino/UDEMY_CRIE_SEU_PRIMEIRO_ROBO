@@ -46,6 +46,22 @@ int y = 10;
 bool resp = x > y;
 
 
+//+------------------------------------------------------------------+
+//| DateTime variables                                               |
+//+------------------------------------------------------------------+
+
+//--- D'aaaa.mm.dd hh:mm:ss' -> this is the format
+
+datetime diaHoje = D'2020.03.04 00:00:00';
+datetime diaHoje2 = D'2020.03.04 22';
+datetime diaHoje3 = D'2020.03.04';
+datetime dia;
+
+Print("Data ref = ", dia);
+
+
+
+
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
