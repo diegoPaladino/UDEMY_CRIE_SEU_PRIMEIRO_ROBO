@@ -6,6 +6,11 @@
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
+
+#include <VirtualKeys.mqh>
+#include <Canvas/FlameCanvas.mqh>
+#include <Canvas/Charts/PieChart.mqh>
+
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
@@ -49,3 +54,5 @@ void OnTimer()
    
   }
 //+------------------------------------------------------------------+
+
+
