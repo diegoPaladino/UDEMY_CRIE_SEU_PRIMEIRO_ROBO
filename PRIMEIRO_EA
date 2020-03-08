@@ -3,14 +3,20 @@
 //|                                                    diegoPaladino |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
+
+int var_1;
+int var_2 = -87;
+
+ushort var_3 = 57;
+uint var_4 = 98;
+
+uint var_5 = -87;
+
+
+
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
-
-#include <VirtualKeys.mqh>
-#include <Canvas/FlameCanvas.mqh>
-#include <Canvas/Charts/PieChart.mqh>
-
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
@@ -51,7 +57,8 @@ void OnTick()
 void OnTimer()
   {
 //---
-   
+   Print("Passou 2 segundos -> ", k++);
+   Print("Var_2 = ",var_2, "   Var_5 = ",var_5);
   }
 //+------------------------------------------------------------------+
 
