@@ -25,6 +25,7 @@ void OnDeinit(const int reason)
   {
 //--- destroy timer
    EventKillTimer();
+   Print("Estamos no OnDeinit()");   
    
   }
 //+------------------------------------------------------------------+
