@@ -14,6 +14,16 @@ uint var_5 = -87;
 
 
 
+//+------------------------------------------------------------------+
+//|   DOUBLE VARIABLES                                               |
+//+------------------------------------------------------------------+
+double valorIFR = 1.618;
+float a=1.5;
+float b=0.5;
+
+double c=a/b;
+
+
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
