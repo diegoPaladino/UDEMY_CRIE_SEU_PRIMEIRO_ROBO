@@ -17,19 +17,20 @@ uint var_5 = -87;
 double valorIFR = 1.618;
 float a=1.5;
 float b=0.5;
-
 double c=a/b;
-
 
 //+------------------------------------------------------------------+
 //|   STRING VARIABLES                                               |
 //+------------------------------------------------------------------+
 string s_1="MQL5";
 string s_2="É uma linguagem de programação de EA.";
-
 string s_c=s_1+s_2;
 
-
+//+------------------------------------------------------------------+
+//|   BOOLEAN VARIABLES                                              |
+//+------------------------------------------------------------------+
+bool resp;
+bool resp_2;
 
 
 #property copyright "diegoPaladino"
@@ -77,7 +78,12 @@ void OnTimer()
 //---
    //Print("Passou 2 segundos -> ", k++);
    //Print("Var_2 = ",var_2, "   Var_5 = ",var_5);
-   Print(c_s);
+   //Print(c_s);
+   
+      resp = x > y;
+   
+   
+   Print("Resp_2 = ",resp_2);
   }
 //+------------------------------------------------------------------+
 
