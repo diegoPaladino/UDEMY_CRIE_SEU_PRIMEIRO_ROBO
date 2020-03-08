@@ -6,12 +6,9 @@
 
 int var_1;
 int var_2 = -87;
-
 ushort var_3 = 57;
 uint var_4 = 98;
-
 uint var_5 = -87;
-
 
 
 //+------------------------------------------------------------------+
@@ -22,6 +19,17 @@ float a=1.5;
 float b=0.5;
 
 double c=a/b;
+
+
+//+------------------------------------------------------------------+
+//|   STRING VARIABLES                                               |
+//+------------------------------------------------------------------+
+string s_1="MQL5";
+string s_2="É uma linguagem de programação de EA.";
+
+string s_c=s_1+s_2;
+
+
 
 
 #property copyright "diegoPaladino"
@@ -67,8 +75,9 @@ void OnTick()
 void OnTimer()
   {
 //---
-   Print("Passou 2 segundos -> ", k++);
-   Print("Var_2 = ",var_2, "   Var_5 = ",var_5);
+   //Print("Passou 2 segundos -> ", k++);
+   //Print("Var_2 = ",var_2, "   Var_5 = ",var_5);
+   Print(c_s);
   }
 //+------------------------------------------------------------------+
 
