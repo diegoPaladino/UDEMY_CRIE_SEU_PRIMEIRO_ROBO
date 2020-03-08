@@ -34,6 +34,10 @@ void OnDeinit(const int reason)
 void OnTick()
   {
 //---
+   // Parte Principal do EA
+   //
+   
+   Print("Estamos no OnTick()");
    
   }
 //+------------------------------------------------------------------+
