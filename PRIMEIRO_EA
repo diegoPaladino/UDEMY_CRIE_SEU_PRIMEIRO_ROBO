@@ -103,14 +103,21 @@ void OnTimer()
    
    
       //--- VETORES DE VARIÁVEIS
-   int meuArray[4];
-   meuArray[0] = 77;
-   meuArray[1] = 8;
-   meuArray[2] = 04;
+   //int meuArray[4];
+   //meuArray[0] = 77;
+   //meuArray[1] = 8;
+   //meuArray[2] = 04;
    
-   meuArray[3] = 65;
+   //meuArray[3] = 65;
    
-   double meuArray2[4]={3.7,8.1,7.7,8.7};
+   //double meuArray2[4]={3.7,8.1,7.7,8.7};
+   
+      for(int i=0;i<10;i++)
+     {
+      Print("i = ", i);
+      
+     }
+     Print("----------------------->",k++);
   }
 //+------------------------------------------------------------------+
 
