@@ -112,9 +112,14 @@ void OnTimer()
    
    //double meuArray2[4]={3.7,8.1,7.7,8.7};
    
+   
+   //--- LAÇO DE REPETIÇÃO FOR
+   
+   double meuArray2[4]={3.7,8.1,7.7,8.7};
+   
       for(int i=0;i<10;i++)
      {
-      Print("i = ", i);
+      Print("meuArray2[",i,"] = ", meuArray2[i]);
       
      }
      Print("----------------------->",k++);
