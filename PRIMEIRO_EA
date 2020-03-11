@@ -45,9 +45,17 @@ bool resp_2;
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
-
+//---
 #define PI 3.1416
 #define NOME_EMPRESA "Nome Fantasia!"
+//---
+enum ESTACOES_ANO
+  {
+   primavera,  //0
+   verao,      //1
+   outono,     //2
+   inverno,    //3
+  };
 
 
 //+------------------------------------------------------------------+
@@ -122,11 +130,21 @@ void OnTimer()
    //   Print("meuArray[",i,"] = ",meuArray2[i]);
    //  }
    
+   /*
    for(int i=10;i>0;i--)
      {
       Print("i = ",i);
      }
      Print("----------------------->",k++);
+     */
+     
+//--- Print of the "enum" function 
+
+     ESTACOES_ANO estacao;
+     
+     estacao = verao;
+     
+     Print("Estacao = ", estacao);
   }
 //+------------------------------------------------------------------+
 
