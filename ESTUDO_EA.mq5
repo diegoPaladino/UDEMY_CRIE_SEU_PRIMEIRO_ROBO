@@ -23,8 +23,9 @@ enum ESTACOES_ANO
 
 
 //---
-input int numeroPeriodos = 11;
-input string Comentario = "";
+input int numeroPeriodos = 11;         //Nº DE PERÍODOS
+input string Comentario = "";          //COMENTÁRIOS
+input ESTACOES_ANO estacao = outono;   //ESTAÇÃO
 
 
 
