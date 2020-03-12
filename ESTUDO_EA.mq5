@@ -8,6 +8,13 @@
 #property version   "1.00"
 //---
 
+enum ESTACOES_ANO
+  {
+   primavera = 77,   //0
+   verao,       2,   //1
+   outono,      3,   //2
+   inverno,     4,   //3
+  };
 
 
 
