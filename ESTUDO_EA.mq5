@@ -11,9 +11,9 @@
 enum ESTACOES_ANO
   {
    primavera = 77,   //PRIMAVERA
-   verao,       2,   //VERÃO
-   outono,      3,   //OUTONO
-   inverno,     4,   //INVERNO
+   verao =      2,   //VERÃO
+   outono =     3,   //OUTONO
+   inverno =    4,   //INVERNO
   };
 
 
