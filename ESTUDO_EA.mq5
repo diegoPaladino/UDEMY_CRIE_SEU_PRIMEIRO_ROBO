@@ -10,10 +10,10 @@
 
 enum ESTACOES_ANO
   {
-   primavera = 77,   //0
-   verao,       2,   //1
-   outono,      3,   //2
-   inverno,     4,   //3
+   primavera = 77,   //PRIMAVERA
+   verao,       2,   //VERÃO
+   outono,      3,   //OUTONO
+   inverno,     4,   //INVERNO
   };
 
 
