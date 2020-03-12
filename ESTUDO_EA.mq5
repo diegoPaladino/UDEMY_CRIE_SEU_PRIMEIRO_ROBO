@@ -66,3 +66,9 @@ void OnTimer()
    
   }
 //+------------------------------------------------------------------+
+
+void myFun(double a, double b)
+   {
+      double soma = a+b;
+      
+      Print("Soma - ", soma);
