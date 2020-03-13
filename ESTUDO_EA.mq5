@@ -63,8 +63,10 @@ void OnTick()
 void OnTimer()
   {
 //---
-   myFun(3,4);
-      
+   //myFun(3,4);
+   //myFun2(9,3);
+   Print("Div = ", myFun2(3,9));
+   
   }
 //+------------------------------------------------------------------+
 
@@ -73,4 +75,10 @@ void myFun(double a, double b)
       double soma = a+b;
       
       Print("Soma - ", soma);
+}
+
+double myFun2(double n, double d)
+{
+   double div = n/d;
+   return div;
 }
