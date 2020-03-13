@@ -35,7 +35,7 @@ input ESTACOES_ANO estacao = outono;   //ESTAÇÃO
 int OnInit()
   {
 //--- create timer
-   EventSetTimer(60);
+   EventSetTimer(3);
    
 //---
    return(INIT_SUCCEEDED);
@@ -63,7 +63,8 @@ void OnTick()
 void OnTimer()
   {
 //---
-   
+   myFun(3,4);
+      
   }
 //+------------------------------------------------------------------+
 
@@ -72,3 +73,4 @@ void myFun(double a, double b)
       double soma = a+b;
       
       Print("Soma - ", soma);
+}
