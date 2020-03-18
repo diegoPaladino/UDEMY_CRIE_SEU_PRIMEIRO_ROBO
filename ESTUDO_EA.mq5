@@ -99,5 +99,7 @@ void funcTeste()
    
    int np2 = 2;
    
+   myFun(np1,np2);
+   
    Print("Multiplicãção = ", np1*np2);
 }
