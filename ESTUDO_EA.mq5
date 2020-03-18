@@ -87,7 +87,9 @@ double myFun2(double n, double d)
 // coment to git 17032020
 }
 
-void funcTeste();
+int vg1 = 22;
+
+void funcTeste()
 {
    int np1 = 7;
    
