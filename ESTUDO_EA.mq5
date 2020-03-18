@@ -86,3 +86,12 @@ double myFun2(double n, double d)
 // COMMENT TO GIT 16032020
 // coment to git 17032020
 }
+
+void funcTeste();
+{
+   int np1 = 7;
+   
+   int np2 = 2;
+   
+   Print("Multiplicãção = ", np1*np2);
+}
