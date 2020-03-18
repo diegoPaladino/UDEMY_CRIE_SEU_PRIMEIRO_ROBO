@@ -65,7 +65,11 @@ void OnTimer()
 //---
    //myFun(3,4);
    //myFun2(9,3);
-   Print("Div = ", myFun2(3,9));
+   //Print("Div = ", myFun2(3,9));
+   funcTeste();
+   
+   //Print("Var local = ",np1);
+   Print("Var Global = ",vg1);
    
   }
 //+------------------------------------------------------------------+
