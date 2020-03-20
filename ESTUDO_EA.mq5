@@ -37,6 +37,11 @@ int OnInit()
 //--- create timer
    EventSetTimer(3);
    
+   Print("Símbolo = ", _Symbol);
+   Print("Período = ", _Period);
+   Print("Pontos = ", _Point);
+   Print("Dígitos = ", _Digits);
+   
 //---
    return(INIT_SUCCEEDED);
   }
