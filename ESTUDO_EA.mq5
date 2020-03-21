@@ -108,3 +108,26 @@ void funcTeste()
    
    Print("Multiplicãção = ", np1*np2);
 }
+//+------------------------------------------------------------------+
+//|   OPERAÇÕES MATEMÁTICAS                                          |
+//+------------------------------------------------------------------+
+
+ing varA = 2+3;
+
+double varB = 2.5 + varA;
+
+double varC = varA - varB;
+
+//---
+//Multiplicação
+
+int varD = 2*3;
+
+double varE = 2.5 * varD;
+
+//---
+// Divisão
+
+double varF = 5/2;
+
+int varG = 5/2;
