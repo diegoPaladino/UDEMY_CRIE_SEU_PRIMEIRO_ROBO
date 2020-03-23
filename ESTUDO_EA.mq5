@@ -131,3 +131,59 @@ double varE = 2.5 * varD;
 double varF = 5/2;
 
 int varG = 5/2;
+
+
+//--- LÓGICA
+
+//A > B
+//
+//A < B
+//
+//A >= B
+//
+//A <= B
+//
+//A == B
+//
+//A != B
+
+int A = 7;
+int B = 7;
+int C = 10;
+
+   if(A == B && A+B == C)
+{
+   Print("OK!");
+}
+
+   if(A == B || A == C)
+{
+   Print(true);
+}
+
+if(A > B)
+  {
+   Print("A > B");
+  }
+  else
+    {
+     Print("A < B");
+    }
+    
+if(A>B)
+  {
+   Print("A>B");
+  }
+  else if(A==B)
+         {
+          Print("A = B");
+         }
+   else if(A!=B)
+          {
+           Print("A!=B");
+          }
+          
+else
+  {
+   Print("Nada!");
+  }
