@@ -187,3 +187,9 @@ else
   {
    Print("Nada!");
   }
+
+  bool cond = true;
+  
+  bool resp = cond ? true: false;
+  
+  Print(resp);
