@@ -53,10 +53,12 @@ void OnTick()
 void OnTimer()
   {
 //---
-   Print("Preço Abertura = ", velas[0].open);
-   Print("Preço Fechamento = ", velas[0].close);
-   Print("Preço Máxima = ", velas[0].high);
-   Print("Preço Mínima = ", velas[0].low);
+   int ind = 2;
+
+   Print("Preço Abertura = ", velas[ind].open);
+   Print("Preço Fechamento = ", velas[ind].close);
+   Print("Preço Máxima = ", velas[ind].high);
+   Print("Preço Mínima = ", velas[ind].low);
    
    Print("========================================");
   }
