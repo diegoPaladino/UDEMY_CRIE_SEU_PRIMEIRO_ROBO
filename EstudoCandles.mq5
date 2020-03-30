@@ -64,3 +64,11 @@ void OnTimer()
   }
 //+------------------------------------------------------------------+
 
+   int ind = 0;
+   
+   string leg_tela = "Preço Abertura = "+ DoubleToString(velas[ind].open)+"\n"+
+                     "Preço Fechamento = "+DoubleToString(velas[ind].close)+"\n"+
+                     "Preço Max = "+DoubleToString(velas[ind].high)+"\n"+
+                     "Preço Min = "+DoubleToString(velas[ind].low)+"\n\n"+
+                     "Tempo = "+tick.time+"\n"+
+                     "Volume = "+tick.volume;
