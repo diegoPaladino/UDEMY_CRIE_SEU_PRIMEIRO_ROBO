@@ -72,3 +72,9 @@ void OnTimer()
                      "Preço Min = "+DoubleToString(velas[ind].low)+"\n\n"+
                      "Tempo = "+tick.time+"\n"+
                      "Volume = "+tick.volume;
+  
+  Comment(leg_tela); 
+  
+  Alert(leg_tela);
+  
+}
