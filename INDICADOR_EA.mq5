@@ -11,7 +11,8 @@
 int mm_Handle;
 double mm_Buffer[];
 
-
+int ifr_Handle;
+double ifr_Buffer[];
 
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
@@ -24,7 +25,9 @@ int OnInit()
 
    mm_Handle = iMA(_Symbol,_Period,21,0,MODE_SMA,PRICE_CLOSE);
    
-   if(mm_Handle < 0)
+   ifr_Handle = iRSI(_Symbol,_Period,7,PRICE_CLOSE);
+   
+   if(mm_Handle < 0 || ifr_Handle<0)
      {
       Alert("Erro ao carregar handle do indicador - ", GetLastError());
       return(-1);
@@ -32,6 +35,7 @@ int OnInit()
      
 //---
 ChartIndicatorAdd(0,0,mm_Handle);
+ChartIndicatorAdd(0,1,ifr_Handle);
 
 //---
    return(INIT_SUCCEEDED);
@@ -56,7 +60,11 @@ void OnTick()
    
    ArraySetAsSeries(mm_Buffer,true);
    
-   Print("Valor MM=", mm_Buffer[0]);
+   CopyBuffer(ifr_Handle,0,0,3,ifr_Buffer);
+   
+   Print("Valor IFR=", ifr_Buffer[0]);
+   
+   //Print("Valor MM=", mm_Buffer[0]);
   }
 //+------------------------------------------------------------------+
 //| Timer function                                                   |
