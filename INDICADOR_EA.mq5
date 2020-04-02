@@ -8,9 +8,11 @@
 #property version   "1.00"
 //---
 
+//--- Média Móvel
 int mm_Handle;
 double mm_Buffer[];
 
+//--- IFR
 int ifr_Handle;
 double ifr_Buffer[];
 
