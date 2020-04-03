@@ -6,6 +6,15 @@
 #property copyright "diegoPaladino"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
+//---
+
+enum ESTRATEGIA_ENTRADA
+  {
+   APENAS_MM,
+   APENAS_IRF,
+   MM_E_IFR
+  };
+
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
