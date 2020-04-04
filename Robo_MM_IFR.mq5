@@ -43,6 +43,33 @@ input double SL                           = 30;             // Stop Loss
 
 sinput string s4; //-------------------------------
 input string hora_limite_fecha_op         = "17:40";        // Horário Limite Fechar Posição
+//---
+//+------------------------------------------------------------------+
+//|  Variáveis para os indicadores                                   |
+//+------------------------------------------------------------------+
+//--- Médias Móveis
+// RÁPIDA - menor período
+int mm_rapida_Handle;      // Handle controlador da média móvel rápida
+double mm_rapida_Buffer[]; // Buffer para armazenamento dos dados das médias
+
+// LENTA - maior período
+int mm_lenta_Handle;      // Handle controlador da média móvel lenta
+double mm_lenta_Buffer[]; // Buffer para armazenamento dos dados das médias
+
+//--- IFR
+int ifr_Handle;           // Handle controlador para o IFR
+double ifr_Buffer[];      // Buffer para armazenamento dos dados do IFR
+
+//+------------------------------------------------------------------+
+//| Variáveis para as funçoes                                        |
+//+------------------------------------------------------------------+
+
+int magic_number = 123456;   // Nº mágico do robô
+
+MqlRates velas[];            // Variável para armazenar velas
+MqlTick tick;                // variável para armazenar ticks 
+
+
 
 
 //+------------------------------------------------------------------+
