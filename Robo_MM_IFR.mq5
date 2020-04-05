@@ -201,3 +201,31 @@ void VendaAMercado()
         }
    }
 }
+void FechaCompra()
+   {
+      MqlTradeRequest      requisicao;    // requisição
+      MqlTradeResult       resposta       // resposta
+      
+      ZeroMemory(requisicao);
+      ZeroMemory(resposta);
+      
+      //---
+      requisicao.action       = TRADE_ACTION_DEAL;
+      requisicao.magic        = magic_number;
+      requisicao.symbol       = _Symbol;
+      requisicao.volume       = num_lots;
+      requisicao.price        = 0;
+      requisicao.type         = ORDER_TYPE_SELL;
+      requisicao.type_filling = ORDER_FILLING_RETURN;
+      
+      //---
+      OrderSend(requisicao,resposta);
+      //---
+      if(respota.retcode == 10008 || resposta.retcode == 10009)
+        {
+         Print("Ordem de Venda executada com sucesso!");
+        }
+      else
+        {
+         Print("Erro ao enviar Ordem de Venda. Erro = ", GetLastError());
+        }
