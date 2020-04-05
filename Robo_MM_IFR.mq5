@@ -128,3 +128,28 @@ void desenhaLinhaVertical(string,nome,datetime dt, color cor = clrAliceBlue);
    ObjectCreate(0,nome,OBJ_VLINE,0,dt,0);
    ObjectSetInteger(0,nome,OBJPROP_COLOR,cor);
 }
+
+//+------------------------------------------------------------------+
+//|  FUNÇÃO PARA ENVIO DE ORDENS                                     |
+//+------------------------------------------------------------------+
+
+// COMPRA A MERCADO
+void CompraAMercado() // bser na documentação ordem das variaveis!!
+{
+   MqlTradeRequest   requisicao;    // requisição
+   MqlTradeResult    resposta;      // resposta
+   
+   ZeroMemory(requisicao);
+   ZeroMemory(resposta);
+   
+   //-Caracteristicas da ordem de Compra
+   requisicao.action       = TRADE_ACTION_DEAL;                            // Executa ordem a mercado
+   requisicao.magic        =  magic_number;                                // Nº mágico da ordem
+   requisicao.symbol       =  _Symbol;                                     // Símbolo do ativo
+   requisicao.volume       = num_lots;                                     // Nº de Lotes
+   requisicao.price        = NormalizeDouble(tick.ask,_Digits);            // Preço para a compra
+   requisicao.sl           = NormalizeDouble(tick.ask - SL*_Point,_Digits);// Preço Stop Loss
+   requisicao.tp           = NormalizeDouble(tick.ask + TK*_Point,_Digits);// Alvo de Ganho - Take Profit
+   requisicao.deviation    = 0;                                            // Desvio Permitido do preço
+   requisicao.type         = ORDER_TYPE_BUY;                               // Tipo de ordem
+   requisicao.type_filling = ORDER_FILLING_FOK;                            // Tipo de Preenchimento da ordem
