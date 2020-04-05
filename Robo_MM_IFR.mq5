@@ -153,3 +153,17 @@ void CompraAMercado() // bser na documentação ordem das variaveis!!
    requisicao.deviation    = 0;                                            // Desvio Permitido do preço
    requisicao.type         = ORDER_TYPE_BUY;                               // Tipo de ordem
    requisicao.type_filling = ORDER_FILLING_FOK;                            // Tipo de Preenchimento da ordem
+
+//---
+OrderSend(requisicao,resposta);
+//---
+if(resposta.retcode == 10008 || resposta.retcode == 10009)
+  {
+   Print("Ordem de Compora executada com sucesso!");
+  }
+  else
+    {
+     Print("Erro ao enviar Ordem Compra. Erro = ", GetLastError());
+     ResetLastError;
+    }
+}
