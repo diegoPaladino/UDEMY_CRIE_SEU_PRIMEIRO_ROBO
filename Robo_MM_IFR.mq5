@@ -115,6 +115,16 @@ void OnDeinit(const int reason)
 void OnTick()
   {
 //---
-   
+   desenhaLinhaVertical("L1", tick.time,clrRed);
   }
 //+------------------------------------------------------------------+
+//+------------------------------------------------------------------+
+//|  FUNÇÕES PARA AUXILIAR NA VISUALIZAÇÃO DA ESTRATÉGIA                                                                |
+//+------------------------------------------------------------------+
+
+void desenhaLinhaVertical(string,nome,datetime dt, color cor = clrAliceBlue);
+{
+   ObjectDelete(0,nome);
+   ObjectCreate(0,nome,OBJ_VLINE,0,dt,0);
+   ObjectSetInteger(0,nome,OBJPROP_COLOR,cor);
+}
