@@ -78,7 +78,24 @@ MqlTick tick;                // variável para armazenar ticks
 int OnInit()
   {
 //---
+   mm_rapida_Handle  = iMA(_Symbol,mm_tempo_grafico,mm_rapida_periodo,0,mm_metodo,mm_preco);
+   mm_lenta_Handle   = iMA(_Symbol,mm_tempo_grafico,mm_lenta_periodo,0,mm_metodo,mm_preco);
    
+   ifr_Handle - iRSI(_Symbol,ifr_tempo_grafico,ifr_periodo,ifr_preco);
+   
+   if(mm_rapida_Handle<0 || mm_lenta_Handle<0 || ifr_Handle<0)
+     {
+      Alert("Erro ao tentar criar Handles dpara o indiecador = erro: ", GetLastError(), "!");
+      return(-1);
+     }
+     
+     CopyRates(_Symbol,_Period,0,4,velas);
+     ArraySetAsSeries(velas,true);
+     
+     //Para adicionar no gráfico o indicador;
+     ChartIndicatorAdd(0,0,mm_rapida_Handle);
+     ChartIndicatorAdd(0,0,mm_lenta_Handle);
+     ChartIndicatorAdd(0,1,ifr_Handle);
 //---
    return(INIT_SUCCEEDED);
   }
