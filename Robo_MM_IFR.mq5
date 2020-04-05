@@ -105,7 +105,9 @@ int OnInit()
 void OnDeinit(const int reason)
   {
 //---
-   
+   IndicatorRelease(mm_rapida_Handle);
+   IndicatorRelease(mm_lenta_Handle);
+   IndicatorRelease(ifr_Handle);
   }
 //+------------------------------------------------------------------+
 //| Expert tick function                                             |
