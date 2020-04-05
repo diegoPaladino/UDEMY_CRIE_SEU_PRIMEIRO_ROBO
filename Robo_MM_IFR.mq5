@@ -166,4 +166,38 @@ if(resposta.retcode == 10008 || resposta.retcode == 10009)
      Print("Erro ao enviar Ordem Compra. Erro = ", GetLastError());
      ResetLastError;
     }
+    
+// VENDA A MERCADO
+void VendaAMercado()
+   {
+   MqlTradeRequest   requisicao;    // requisição
+   MqlTradeResult    resposta;      // resposta
+   
+   ZeroMemory(requisicao);
+   ZeroMemory(resposta);
+   
+   //--- Características da ordem de Venda
+   requisicao.action       = TRADE_ACTION_DEAL;                            // Executa ordem a mercado
+   requisicao.magic        =  magic_number;                                // Nº mágico da ordem
+   requisicao.symbol       =  _Symbol;                                     // Símbolo do ativo
+   requisicao.volume       = num_lots;                                     // Nº de Lotes
+   requisicao.price        = NormalizeDouble(tick.bid,_Digits);            // Preço para a compra
+   requisicao.sl           = NormalizeDouble(tick.bid + SL*_Point,_Digits);// Preço Stop Loss
+   requisicao.tp           = NormalizeDouble(tick.bid - TK*_Point,_Digits);// Alvo de Ganho - Take Profit
+   requisicao.deviation    = 0;                                            // Desvio Permitido do preço
+   requisicao.type         = ORDER_TYPE_SELL;                              // Tipo de ordem
+   requisicao.type_filling = ORDER_FILLING_FOK;                            // Tipo de Preenchimento da ordem
+   //---
+   OrderSend(requisicao,resposta);
+   //---
+      if(resposta.retcode == 10008 || resposta.retcode == 10009)
+        {
+         Print("Ordem de Venda executada com sucesso!");
+        }
+      else
+        {
+         Print("Erro ao enviar Ordem Venda. Erro = ", GetLastError());
+         ResetLastError();
+        }
+   }
 }
