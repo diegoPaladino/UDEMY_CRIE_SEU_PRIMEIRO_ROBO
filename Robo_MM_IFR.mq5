@@ -229,3 +229,37 @@ void FechaCompra()
         {
          Print("Erro ao enviar Ordem de Venda. Erro = ", GetLastError());
         }
+   }
+//+------------------------------------------------------------------+
+//|    FUNÇÕES UTEIS                                                 |
+//+------------------------------------------------------------------+
+//--- Para Mudança de Candle
+bool TemosNovaVela()
+{
+//--- memoriza o tempo de abertura da ultim barra (vela) numa variável
+   static datetime last_time = 0;
+//--- tempo atual
+   datetime lastbar_time = (datetime) SeriesInfoInteger(Symbol(),Period(),SERIES_LASTBAR_DATE);
+   
+//--- se for a primeira chamada da função
+   if(last_time==0)
+     {
+      //--- atriuir valor temporal e sair
+      last_time=lastbar_time;
+      return(false);
+     }
+
+//--- se o tempo estiver diferente
+   if(last_time!=lastbar_time)
+     {
+      //--- memorizar esse tempo e retornar true
+      last_time=lastbar_time;
+      return(true);
+     }
+
+//--- se passarmos desta linha, então a barra não é nova; retornar false
+   return(false);
+
+
+
+}
