@@ -116,6 +116,37 @@ void OnTick()
   {
 //---
    desenhaLinhaVertical("L1", tick.time,clrRed);
+      // Copiar um vetor de dados tamanho três para o vetor mm_Buffer
+   CopyBuffer(mm_rapida_Handle,0,0,4,mm_rapida_Buffer);
+   CopyBuffer(mm_lenta_Handle,0,0,4,mm_lenta_Buffer);
+   
+   CopyBuffer(ifr_Handle,0,0,4,ifr_Buffer);
+   
+   //--- Alimentar Buffers das Velas com dados:
+   CopyRates(_Symbol,_Period,0,4,velas);
+   ArraySetAsSeries(velas,true);
+   
+   //Ordenar o vetor de dados:
+   ArraySetAsSeries(mm_rapida_Buffer,true);
+   ArraySetAsSeries(mm_lenta_Buffer,true);
+   ArraySetAsSeries(ifr_Buffer,true);
+   //---
+   
+   //Alimentar com dados variáveis de tick
+   SymbolInfoTick(_Symbol,tick);
+   
+   //LOGICA PARA ATIVAR COMPRA
+   bool compra_mm_cros = mm_rapida_Buffer[0] > mm_lenta_Buffer[0] &&
+                         mm_rapida_Buffer[2] < mm_lenta_Buffer[2];
+                         
+   bool compra_ifr = ifr_Buffer[0] <= ifr_sobrevenda;
+   
+   //LOGICA PARA ATIVAR VENDA
+   bool venda_mm_cros = mm_lenta_Buffer[0] > mm_rapida_Buffer[0] &&
+                         mm_lenta_Buffer[2] < mm_rapida_Buffer[2];
+                         
+   bool venda_ifr = ifr_Buffer[0] <= ifr_sobrecompra;
+   
   }
 //+------------------------------------------------------------------+
 //+------------------------------------------------------------------+
