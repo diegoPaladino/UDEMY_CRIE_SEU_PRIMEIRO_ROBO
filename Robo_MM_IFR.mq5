@@ -147,6 +147,26 @@ void OnTick()
                          
    bool venda_ifr = ifr_Buffer[0] >= ifr_sobrecompra;
    
+   //---
+   bool Comprar = false; // Pode comprar?
+   bool Vender = false; // Pode vender?
+   
+   if(estrategia == APNEAS_MM)
+     {
+         Comprar = compra_mm_cros;
+         Vender = venda_mm_cros;
+     }
+     
+   else if(estrategia == APENAS_IRF)
+     {
+         Comprar = compra_ifr;
+         Vender = venda_ifr;
+     }
+   else
+     {
+         Comprar = compra_mm_cros && compra_ifr;
+         Vender = venda_mm_cros && venda_ifr;      
+     }  
   }
 //+------------------------------------------------------------------+
 //+------------------------------------------------------------------+
