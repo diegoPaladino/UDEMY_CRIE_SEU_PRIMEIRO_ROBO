@@ -145,7 +145,7 @@ void OnTick()
    bool venda_mm_cros = mm_lenta_Buffer[0] > mm_rapida_Buffer[0] &&
                          mm_lenta_Buffer[2] < mm_rapida_Buffer[2];
                          
-   bool venda_ifr = ifr_Buffer[0] <= ifr_sobrecompra;
+   bool venda_ifr = ifr_Buffer[0] >= ifr_sobrecompra;
    
   }
 //+------------------------------------------------------------------+
