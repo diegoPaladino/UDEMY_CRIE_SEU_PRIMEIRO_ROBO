@@ -166,7 +166,30 @@ void OnTick()
      {
          Comprar = compra_mm_cros && compra_ifr;
          Vender = venda_mm_cros && venda_ifr;      
-     }  
+     }
+     
+/---
+   // retorna true se tivermos uma nova vela
+   bool temosNovaVela = TemosNovaVela();
+
+   // Toda vez qeu existir uma nova vela entrar nesse 'if'
+   
+   if(temosNovaVela)
+     {
+      
+      // Condição de Compra;
+      if(Comprar && PositionSelect(_Symbol)==false)
+        {
+         desenhaLinhaVertical("Compra",velas[1].time,clrBlue);
+         CompraAMercado();
+        }
+        
+      if(Vender && PositionSelect(_Symbol)==false)
+        {
+         desenhaLinhaVertical("Venda",velas[1].time,clrRed);
+         VendaAMercado();
+        }
+     }
   }
 //+------------------------------------------------------------------+
 //+------------------------------------------------------------------+
