@@ -190,6 +190,21 @@ void OnTick()
          VendaAMercado();
         }
      }
+     
+//---
+   if(TimeToString(TimeCurrent(),TIME_MINUTES)== hora_limite_fecha_op && PosiotionSelect(_Symbool)==true)
+     {
+         Print("------> Fim do Tempo Operacional: encerrar posições abertas!");
+         
+         if(PositionGetInteger(POSITION_TYPE) == POSITION_TYPE_BUY)
+            {
+               FechaCompra();
+            }
+         else if(PositionGetInteger(POSITION_TYPE)== POSITION_TYPE_SELL)
+           {
+               FechaVenda();
+           }
+     }
   }
 //+------------------------------------------------------------------+
 //+------------------------------------------------------------------+
